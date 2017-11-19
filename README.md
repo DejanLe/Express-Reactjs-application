@@ -21,11 +21,31 @@ npm start
 or
 yarn start
 
-PORT=3000 node bin/www
+PORT=3001 node bin/www
 
-or in the browser localhost:3000
-
-
+  localhost:3001
 
 
 
+
+Add React JS to Express
+npm install -g create-react-app
+
+create react app
+
+create-react-app client
+
+add and Configure the Proxy
+ 
+
+ "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:3001"
+
+
+Fetch the Data from React
+At this point 2 servers are running: Express (on port 3001) and Create React App’s Webpack dev server (on port 3000).
